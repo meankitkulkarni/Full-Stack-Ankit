@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Result Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Student Result Portal</h1>
+    <p>Registration and Academic Result System</p>
+</header>
 
+<main>
+<section class="form-section">
+    <h2>Register Student</h2>
+    <form id="resultForm">
+        <div class="student-info">
+            <div>
+                <label>Full Name</label>
+                <input type="text" id="studentName">
+            </div>
+            <div>
+                <label>Roll Number</label>
+                <input type="text" id="rollNumber">
+            </div>
+            <div>
+                <label>Course</label>
+                <input type="text" id="course">
+            </div>
+        </div>
+
+        <h3>Subject Marks</h3>
+        <table>
+            <thead>
+                <tr><th>Subject</th><th>Marks (Out of 100)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Web Technology</td><td><input type="number" id="web" min="0" max="100"></td></tr>
+                <tr><td>Database Management</td><td><input type="number" id="database" min="0" max="100"></td></tr>
+                <tr><td>Programming</td><td><input type="number" id="programming" min="0" max="100"></td></tr>
+            </tbody>
+        </table>
+
+        <button type="submit">Generate Result</button>
+    </form>
+</section>
+
+<section id="report" class="report">
+    <h2>Result Report</h2>
+    <div class="report-details">
+        <p><b>Student:</b> <span id="showName"></span></p>
+        <p><b>Roll No:</b> <span id="showRoll"></span></p>
+        <p><b>Course:</b> <span id="showCourse"></span></p>
+    </div>
+
+    <div class="summary">
+        <div><span>Total</span><strong id="showTotal"></strong></div>
+        <div><span>Percentage</span><strong id="showPercentage"></strong></div>
+        <div><span>Result</span><strong id="showStatus"></strong></div>
+    </div>
+</section>
+
+<section class="saved-section">
+    <h2>Saved Students</h2>
+    <div id="savedStudents"><p>No students saved yet.</p></div>
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
